@@ -1,4 +1,4 @@
-module Comp.Main
+module Comp.Printf
 import Data.String
 %default total
 
