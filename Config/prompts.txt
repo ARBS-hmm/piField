@@ -1,0 +1,122 @@
+## 1. **The Shape Shifter**
+```
+Define a record where the type of field Y depends on field X, 
+and field Z depends on both X and Y, creating a chain of 
+dependencies where each field's type is determined by all 
+previous fields.
+```
+
+## 2. **The Recursive Type Transformer**
+```
+Create a structure where based on a boolean flag, either:
+- A field becomes a function from the structure to itself
+- Or the structure contains a value that determines the next 
+  structure's type
+```
+
+## 3. **The Mutual Dependence**
+```
+Define two records A and B where:
+- The type of a field in A depends on a value in B
+- The type of a field in B depends on a value in A
+- They must be defined simultaneously
+```
+
+## 4. **The Type-Level State Machine**
+```
+Design a record representing a state machine where:
+- The current state is a value
+- Available operations (their existence and types) are 
+  determined by the current state
+- Transitioning changes the type of the entire record
+```
+
+## 5. **The Quine's Challenge**
+```
+Create a record where one field's type is a string representation 
+of the record's own type definition, and another field's value 
+depends on parsing that string.
+```
+
+## 6. **The Infinite Descent**
+```
+Define a record where based on a natural number N:
+- If N > 0, the record contains another record with N-1
+- If N = 0, it contains a base type
+- The types at each level differ based on parity of N
+```
+
+## 7. **The Paradox Constructor**
+```
+Attempt to create a record where:
+- Field A's type is "the type of field B"
+- Field B's type is "the type of field A"
+- Explore what this means and where it breaks
+```
+
+## 8. **The Kleene Star**
+```
+Define a record where based on a list of types:
+- For each type in the list, there's a corresponding field
+- The record's structure recursively nests based on the list
+- The nesting pattern changes based on list properties
+```
+
+## 9. **The Type Oracle**
+```
+Create a system where:
+- You have a "prediction" field containing a type
+- Another field's type is that predicted type
+- A third field validates if the prediction was "correct"
+```
+
+## 10. **The Transfinite Recursion**
+```
+Define a record indexed by ordinals where:
+- At limit ordinals, the type is a product of all previous types
+- At successor ordinals, it's a sum type
+- The record contains itself at lower ordinals
+```
+
+## 11. **The Möbius Strip**
+```
+Design a record where:
+- Going through fields in order changes their types
+- After traversing all fields, you return to the first field
+- But its type has changed based on the journey
+```
+
+## 12. **The Type Labyrinth**
+```
+Create a maze-like structure where:
+- Each node is a record
+- The exit type is determined by the path taken
+- Different paths lead to different final types
+- The same sequence of values yields different types
+```
+
+## 13. **The Self-Referential Checker**
+```
+Define a record where:
+- One field is a function that takes the record itself
+- The function's return type depends on some property of the record
+- The property it checks is about the function itself
+```
+
+## 14. **The Infinite Regress Guardian**
+```
+Create a type that can only be constructed if it doesn't contain 
+itself, but the check for self-containment is part of the type 
+itself.
+```
+
+## 15. **The Type Alchemist**
+```
+Design transformations where:
+- Type A + Type B → Type C (if some condition)
+- Type C + Type D → Type A (if another condition)
+- The conditions are about the types themselves
+- The transformations preserve some invariant
+```
+
+These problems explore the boundaries of dependent type systems, self-reference, recursion, and the interplay between values and types without anchoring to specific applications.
