@@ -1,0 +1,28 @@
+L_trigger = *[ 
+    Sum(Num(x), Comp(Num(x))) 
+  | Sum(Comp(Num(x)), Num(x))
+  | Prod(Num(x), Comp(Num(x)))
+  | Prod(Comp(Num(x)), Num(x))
+] *
+
+nested = Sum( 
+    [Sum]*(Num(x)), 
+    [Sum]*(Comp(Num(x))) 
+)
+
+nested = Prod( 
+    [Prod]*(Num(x)), 
+    [Prod]*(Comp(Num(x))) 
+)
+
+trigger_sum = Sum( //Num(x), //Comp(Num(x)) )
+trigger_prod = Prod( //Num(x), //Comp(Num(x)) )
+
+safeSum = Sum(
+  Sum(
+      Prod(Num(x), $b),
+      Prod(Comp(Num(x)), $c)
+  ), Format (Prod ($b,$c))
+)
+
+
