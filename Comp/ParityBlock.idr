@@ -18,5 +18,10 @@ odd = [1,2,3]
 even : (ParityBlock Even Nat)
 even = [1,2]
 
-  
+func : (p:Parity) -> ParityBlock p Nat -> Nat
+func _ Nil = 0
+func _ (x :: xs) = x
+
+oddFunc : ParityBlock Odd Nat -> Nat
+oddFunc = func Odd
 
