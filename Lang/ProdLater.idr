@@ -52,9 +52,12 @@ coeffHelper _ _ = []
 coefficients : Expr A -> List Nat
 coefficients = coeffHelper A
 
+ok1 : Expr A  -- a + b + c*d
+ok1 = Sum (Sum (Var X) (Var Y)) (Prod (Var Z) (Num 5))
+
+ok2 : Expr A  -- a + b*c + d (violates ordering!)
+ok2 = Sum (Sum (Var X) (Prod (Var Y) (Var Z))) (Var X)
+
 main : IO ()
 main = do
-  putStrLn (show (coefficients e1))
-  putStrLn (show (coefficients e2))
-  putStrLn (show (coefficients e3))
   pure ()
